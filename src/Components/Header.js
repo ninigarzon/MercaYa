@@ -1,9 +1,20 @@
-import React from 'react';
+import React, { useContext, useEffect } from 'react';
 import { Container, Nav, Navbar, NavDropdown } from 'react-bootstrap';
 import ImgHeader from "../assets/img/header-ico.svg";
+import Context from '../context/context';
 
 function Header ()
 {
+    const { login, user } = useContext(Context);
+
+    useEffect(() => {
+        login();
+    }, []);
+
+    useEffect(() => {
+        console.log(user)
+    }, [user]);
+
     return (
         <div className="header">
             <Navbar collapseOnSelect expand="lg" variant="light">

@@ -9,15 +9,20 @@ import {
   Link
 } from "react-router-dom";
 
+/* CONTEXT */
+import State from "./context/state";
+
 function App() {
   return (
     <div className="App">
-    <Header/> 
-    <Router>
+      <State>
+        <Header />
+        <Router>
           <Switch>
             <Route exact path="/" component={Home} />
           </Switch>
-    </Router>
+        </Router>
+      </State>
     </div>
   );
 }

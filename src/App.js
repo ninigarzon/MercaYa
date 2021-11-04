@@ -5,9 +5,8 @@ import Home from "./View/HomeIn";
 import {
   BrowserRouter as Router,
   Switch,
-  Route,
-  Link
 } from "react-router-dom";
+import { PublicRoute, PrivateRoute } from 'react-private-public-route';
 
 /* CONTEXT */
 import State from "./context/state";
@@ -19,7 +18,11 @@ function App() {
         <Header />
         <Router>
           <Switch>
-            <Route exact path="/" component={Home} />
+            <PublicRoute
+              exact
+              path='/'
+              component={Home}
+            />
           </Switch>
         </Router>
       </State>

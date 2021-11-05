@@ -1,29 +1,30 @@
 import React from 'react';
 import { Card, Col, Container, Row } from 'react-bootstrap';
-import '../App.css';
-import ImgLista  from "../assets/img/home-ico-lista.svg";
-import ImgProduct from "../assets/img/home-ico-producto.svg";
-import ImgMarca from "../assets/img/home-ico-marcas.svg";
+import ImgList  from "../../assets/img/home-ico-lista.svg";
+import ImgEdit from "../../assets/img/edit-icon-big.svg";
+import ImgDelete from "../../assets/img/delete-icon-big.svg";
 
-function HomeIn ()
+import '../../App.css';
+
+function ShoppingList ()
 {
     const informationCards = [
         {
-            img: ImgLista,
-            title: 'Lista de compras',
-            text: 'Te redirigiremos la visual donde esta la lista de compras',
-            url: '/shopping-list'
+            img: ImgList,
+            title: 'Crear lista de productos',
+            text: 'Si quieres crear una nueva lista de comprar, dale clic en crear lista aqui.',
+            url: '/create-shopping-list'
         },
         {
-            img: ImgProduct,
-            title: 'Productos',
-            text: 'Te redirigiremos la visual donde esta la lista de productos que registraste',
+            img: ImgEdit,
+            title: 'Editar lista de comprar',
+            text: 'En caso de tener una lista ya existente, podras editarla, haz clic en editar lista aqui.',
             url: '/'
         },
         {
-            img: ImgMarca,
-            title: 'Marcas',
-            text: 'Te redirigiremos la visual donde esta la lista de marcas que registraste',
+            img: ImgDelete,
+            title: 'Eliminar lista de comprar',
+            text: 'Si tiene una lista de compras que quisieras eliminar, dale clic en eliminar lista aqui.',
             url: '/'
         }
     ];
@@ -35,8 +36,7 @@ function HomeIn ()
                 <Container>
                     <Row>
                     <Col lg={12}>
-                        <h1 className="titleHomeIn ">Bienvenido, Nini</h1>
-                        <p className="subtitleHomeIn ">MercaYa, tiene diferentes opciones, las cuales son: </p>
+                        <h1 className="titleHomeIn ">Lista de compras</h1>
                     </Col>
                     {informationCards.map((event) => {
                         return (
@@ -63,4 +63,4 @@ function HomeIn ()
     );
 }
 
-export default HomeIn;
+export default ShoppingList;

@@ -1,6 +1,10 @@
 import './App.css';
 import Header from './Components/Header';
+
+/* VIEWS */
 import Home from "./View/HomeIn";
+import ShoppingList from "./View/shopping-list/ShoppingList";
+import CreateShoppingList from "./View/create-shopping-list/CreateShoppingList";
 
 import {
   BrowserRouter as Router,
@@ -22,6 +26,18 @@ function App() {
               exact
               path='/'
               component={Home}
+            />
+            <PrivateRoute
+              isAuthenticated={true}
+              exact
+              path='/shopping-list'
+              component={ShoppingList}
+            />
+            <PrivateRoute
+              isAuthenticated={true}
+              exact
+              path='/create-shopping-list'
+              component={CreateShoppingList}
             />
           </Switch>
         </Router>

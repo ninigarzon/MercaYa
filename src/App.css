@@ -21,6 +21,7 @@
 
 :root {
   --blue-extra-light-color: #C2E8FE;
+  --background-color: #DDF1FC;
   --blue-light-color: #a6d2eb;
   --blue-color: #61dafb;
   --blue-dark-color: #0da0f2;
@@ -32,6 +33,14 @@
 
 body {
   font-family: "OpenSans-regular";
+  background-color: var(--background-color);
+}
+
+.header {
+  background-color: white;
+  position: fixed;
+  z-index: 10;
+  width: 100%;
 }
 
 .App {
@@ -108,13 +117,13 @@ body {
 
 /* COMMON STYLES */
 .label-input {
-  font-size: 18px;
+  font-size: 14px;
   text-align: left;
 }
 
 .input {
-  font-size: 18px;
-  padding: 0.25rem 0.5rem 0.25rem 0.8rem;
+  font-size: 16px;
+  padding: 0.5rem 0.5rem 0.5rem 0.8rem;
   background-color: var(--blue-light-color);
   border: 1px solid var(--border-blue-color);
   border-radius: 4px;
@@ -155,11 +164,29 @@ body {
   border: 1px solid var(--blue-dark-color);
 }
 
+.button-white {
+  background-color: white;
+  color: var(--blue-dark-color);
+  border: none;
+  padding: 0.5rem;
+  width: 15rem;
+  font-weight: bold;
+  transition: 350ms;
+  border: 1px solid var(--blue-dark-color);
+}
+
+.button-white:hover {
+  background-color: var(--blue-dark-color);
+  color: white;
+  border: 1px solid white;
+}
+
 .container-lists {
   background-color: var(--blue-light-color);
   border-radius: 1rem;
   border: 1px solid var(--border-blue-color);
   margin-top: 3rem;
+  margin-bottom: 3rem;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
 }
@@ -171,18 +198,18 @@ body {
   border: 1px solid var(--border-blue-color);
 }
 
-.element > .element-title {
+.element-title {
   font-family: "OpenSansCondensed-bold";
   font-size: 1.2rem;
   margin-top: 1rem;
   margin-bottom: .1rem;
 }
 
-.element > .element-subtitle {
+.element-subtitle:last-child {
   margin-bottom: 1rem;
 }
 
-.element > .button-edit {
+.button-edit {
   display: block;
   margin: auto;
   margin-bottom: .5rem;
@@ -195,13 +222,13 @@ body {
   padding: .2rem 0;
 }
 
-.element > .button-edit:hover {
+.button-edit:hover {
   background-color: var(--green-button);
   border: 2px solid var(--green-button);
   color: white;
 }
 
-.element > .button-delete {
+.button-delete {
   display: block;
   margin: auto;
   margin-bottom: 1.8rem;
@@ -214,8 +241,36 @@ body {
   padding: .2rem 0;
 }
 
-.element > .button-delete:hover {
+.button-delete:hover {
   background-color: var(--red-button);
   border: 2px solid var(--red-button);
   color: white;
+}
+
+.horizontal-list {
+  display: flex;
+  justify-content: space-between;
+  padding: .5rem 3rem;
+  align-items: center;
+}
+
+.horizontal-list > div > p {
+  text-align: left;
+}
+
+.without-margin {
+  margin: 0 !important;
+}
+
+.margin-top-for-all {
+  margin-top: 3rem;
+}
+
+.btn-finish {
+  margin-top: 3rem;
+  margin-bottom: 3rem;
+}
+
+.btn-create-branding > .margin-btn {
+  margin-top: 1.7rem;
 }

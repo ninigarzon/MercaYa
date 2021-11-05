@@ -6,7 +6,10 @@ import ImgHeader from "../../assets/img/header-ico.svg";
 import './Login.css';
 
 function Login(){
-
+  
+  const redirect = () => {
+    window.document.location.href ="/";
+  }
 return(
   <Container style={{maxWidth: "100%"}}>
   <Row style={{height:"93vh"}}>
@@ -37,7 +40,7 @@ return(
       />
     </InputGroup>
     <b className="styleText2">¿Olvidaste tu contraseña?</b>
-    <Button variant="INICIAR SESIÓN" className="styleButtomLoging">INICIAR SESIÓN</Button>{' '}
+    <Button variant="INICIAR SESIÓN" className="styleButtomLoging" onClick={() => redirect()}>INICIAR SESIÓN</Button>{' '}
 
     </Col>
     </Row>

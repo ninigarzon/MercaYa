@@ -62,7 +62,8 @@ return(
         aria-describedby="basic-addon1"
       />
     </InputGroup>
-    <b className="styleText2">Si tienes una cuenta inicia sesion aqui</b>
+    <p></p>
+    <b className="styleText2">Si tienes una cuenta inicia sesion <a href="/Login">aqui</a></b>
     <Button variant="INICIAR SESIÓN" className="styleButtomLoging">INICIAR SESIÓN</Button>{' '}
 
     </Col>

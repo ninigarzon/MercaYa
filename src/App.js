@@ -14,6 +14,7 @@ import CreateShoppingList from "./View/create-shopping-list/CreateShoppingList";
 import {
   BrowserRouter as Router,
   Switch,
+  Route
 } from "react-router-dom";
 import { PublicRoute, PrivateRoute } from 'react-private-public-route';
 
@@ -28,7 +29,6 @@ function App() {
         <Header />
         <Router>
           <Switch>
-            <Route exact path="/" component={Home} />
             <Route exact path="/Login" component={Login} />
             <Route exact path="/RecuperarC1" component={RecuperarC1} />
             <Route exact path="/RecuperarC2" component={RecuperarC2} />

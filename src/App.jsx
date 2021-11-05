@@ -1,3 +1,5 @@
+import { PublicRoute, PrivateRoute } from 'react-private-public-route';
+
 import './App.css';
 import Header from './Components/Header';
 
@@ -10,13 +12,14 @@ import RecuperarC3 from './View/RecuperarC/RecuperarC3';
 import Register from './View/Register/Register';
 import ShoppingList from "./View/shopping-list/ShoppingList";
 import CreateShoppingList from "./View/create-shopping-list/CreateShoppingList";
+import CreateBranding from "./View/create-branding/CreateBranding";
+import CreateProduct from "./View/create-product/CreateProduct";
 
 import {
   BrowserRouter as Router,
   Switch,
   Route
 } from "react-router-dom";
-import { PublicRoute, PrivateRoute } from 'react-private-public-route';
 
 /* CONTEXT */
 import State from "./context/state";
@@ -50,6 +53,18 @@ function App() {
               exact
               path='/create-shopping-list'
               component={CreateShoppingList}
+            />
+            <PrivateRoute
+              isAuthenticated={true}
+              exact
+              path='/create-branding'
+              component={CreateBranding}
+            />
+            <PrivateRoute
+              isAuthenticated={true}
+              exact
+              path='/create-product'
+              component={CreateProduct}
             />
           </Switch>
         </Router>

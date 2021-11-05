@@ -19,7 +19,7 @@ function Header() {
         <div className="header">
             <Navbar collapseOnSelect expand="lg" variant="light">
                 <Container>
-                    <Navbar.Brand href="#home"><img src={ImgHeader} alt="Header" style={{ width: "70%" }} /></Navbar.Brand>
+                    <Navbar.Brand href="/"><img src={ImgHeader} alt="Header" style={{ width: "70%" }} /></Navbar.Brand>
                     <Navbar.Toggle aria-controls="responsive-navbar-nav" />
                     <Navbar.Collapse id="responsive-navbar-nav" className="justify-content-end">
                         <Nav className="mr-5">

@@ -1,0 +1,156 @@
+/* Incicio Estilos Login */
+
+.styleTitle{
+    position: absolute;
+    width: 365px;
+    height: 55px;
+    left: 286px;
+    top: 96px;
+    
+    font-family: Times New Roman;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 48px;
+    line-height: 55px;
+    
+    color: rgba(0, 0, 0, 0.99);
+  }
+  .styleSubtitle{
+    position: absolute;
+    width: 709px;
+    height: 84px;
+    left: 110px;
+    top: 227px;
+    
+    font-family: Times New Roman;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 24px;
+    line-height: 28px;
+    text-align: center;
+    
+    color: rgba(0, 0, 0, 0.99);
+    
+  }
+  .styleImagen{
+    position: absolute;
+    width: 857px;
+    height: 428px;
+    left: 20px;
+    top: 366px;
+  }
+  .styleImagen2{
+    position: absolute;
+    width: 253px;
+    height: 48px;
+    left: 356px;
+    top: 150px;
+  }
+  .styleText3{
+    position: absolute;
+    width: 162px;
+    height: 15px;
+    left: 400px;
+    top: 250px;
+    
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 13px;
+    line-height: 15px;
+    
+    color: #000000;
+    
+  }
+  .styleData1{
+    position: absolute;
+    width: 148px;
+    height: 21px;
+    left: 180px;
+    top: 315px;
+    
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 21px;
+    /* identical to box height */
+    
+    
+    color: #000000;
+    
+  }
+.styleInput {
+    position: absolute;
+    width: 580px;
+    height: 48px;
+    left: 180px;
+    top: 350px;
+  }  
+  .styleinput{
+    background: #A6D2EB;
+    border: 1px solid #137EBA;
+    box-sizing: border-box;
+    border-radius: 4px;
+  }
+  .styleData2{
+    position: absolute;
+    width: 148px;
+    height: 21px;
+    left: 155px;
+    top: 465px;
+    
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 21px;
+    /* identical to box height */
+    
+    
+    color: #000000;
+    
+  }
+  .styleInput2 {
+    position: absolute;
+    width: 580px;
+    height: 48px;
+    left: 180px;
+    top: 500px;
+  }  
+  .styleinput2{
+    background: #A6D2EB;
+    border: 1px solid #137EBA;
+    box-sizing: border-box;
+    border-radius: 4px;
+  }
+  .styleText2{
+    position: absolute;
+    width: 210px;
+    height: 21px;
+    left: 370px;
+    top: 555px;
+    
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 21px;
+    /* identical to box height */
+    
+    
+    color: #000000;
+  }
+  .styleButtomLoging {
+    position: absolute;
+    width: 253px;
+    height: 63px;
+    left: 350px;
+    top: 605px;
+
+    background: #0DA0F2;
+    border: #0DA0F2;
+  }
+  
+  
+  /* Final estilos Login */

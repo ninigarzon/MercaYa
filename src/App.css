@@ -14,6 +14,11 @@
   font-family: 'OpenSansCondensed-light';
   src: url(assets/font/OpenSans_Condensed/OpenSans_Condensed-Light.ttf);
 }
+@font-face {
+  font-family: 'TimeNewRoman-bold' ;
+  src: url(assets/font/Times_New_Roman/times_new_roman.ttf);
+}
+
 
 .App {
   text-align: center;
@@ -70,6 +75,8 @@
   background: rgb(102, 190, 239);
 }
 /* Fin de Estilos para HomeIn */
+
+
 
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {

@@ -41,7 +41,7 @@ function CreateBranding() {
             />
           </div>
           <div className="btn-create-branding">
-            <button className="button-blue margin-btn">GUARDAR</button>
+            <button className="button-red margin-btn">GUARDAR</button>
           </div>
         </div>
         <div className="container-lists horizontal-list">

@@ -4,10 +4,8 @@ import Header from "./Components/Header";
 
 /* VIEWS */
 import Home from "./View/HomeIn";
-import Login from "./View/Login/Login";
-import RecuperarC1 from "./View/RecuperarC/RecuperarC1";
-import RecuperarC2 from "./View/RecuperarC/RecuperarC2";
-import RecuperarC3 from "./View/RecuperarC/RecuperarC3";
+import Login from "./View/login/Login";
+import RecoverPassword from "./View/recover-password/RecoverPassword";
 import Register from "./View/Register/Register";
 import ShoppingList from "./View/shopping-list/ShoppingList";
 import CreateShoppingList from "./View/create-shopping-list/CreateShoppingList";
@@ -34,9 +32,7 @@ function App() {
         <Router>
           <Switch>
             <Route exact path="/login" component={Login} />
-            <Route exact path="/recover-password" component={RecuperarC1} />
-            <Route exact path="/RecuperarC2" component={RecuperarC2} />
-            <Route exact path="/RecuperarC3" component={RecuperarC3} />
+            <Route exact path="/recover-password" component={RecoverPassword} />
             <Route exact path="/Register" component={Register} />
             <PublicRoute exact path="/" component={Home} />
             <PrivateRoute

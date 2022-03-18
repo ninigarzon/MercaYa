@@ -53,7 +53,7 @@ function CreateProduct() {
             />
           </div>
         </div>
-        <button className="button-blue margin-btn">GUARDAR</button>
+        <button className="button-red margin-btn">GUARDAR</button>
         <div className="container-lists horizontal-list">
           <div>
             <p className="element-title">Leche deslactosada</p>

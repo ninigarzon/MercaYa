@@ -67,7 +67,7 @@ function CreateShoppingList() {
             />
           </div>
         </div>
-        <button className="button-blue">AGREGAR PRODUCTO</button>
+        <button className="button-red">AGREGAR PRODUCTO</button>
         <div className="container-lists">
           <div className="element">
             <p className="element-title">Leche deslactosada</p>
@@ -82,7 +82,7 @@ function CreateShoppingList() {
             <button className="button-delete">Eliminar</button>
           </div>
         </div>
-        <button className="button-blue">CREAR LISTA</button>
+        <button className="button-red">CREAR LISTA</button>
       </Container>
       <button
         className="button-white btn-finish"

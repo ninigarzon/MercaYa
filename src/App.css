@@ -22,18 +22,34 @@
 :root {
   --blue-extra-light-color: #C2E8FE;
   --background-color: #DDF1FC;
-  --blue-light-color: #a6d2eb;
+  --red-light-color: #a6d2eb;
   --blue-color: #61dafb;
-  --blue-dark-color: #0da0f2;
-  --border-blue-color: #137eba;
+  --second-red-color: #137eba;
   --blue-dark-2-color: #055f92;
   --green-button: #5DD7C8;
   --red-button: #AC2727;
+  /* NEW COLORS */
+  --bg-red: #CE3030;
+  --red-color: #E0061F;
+  --red-light-color: #FF929E;
+  --second-red-color: #DE0B0B;
 }
 
 body {
   font-family: "OpenSans-regular";
-  background-color: var(--background-color);
+}
+
+.background-red {
+  background-color: var(--bg-red);
+}
+
+.full-width {
+  max-width: 100%;
+}
+
+.col-height {
+  height: 100vh;
+  padding: 0px 100px;
 }
 
 .header {
@@ -124,8 +140,8 @@ body {
 .input {
   font-size: 16px;
   padding: 0.5rem 0.5rem 0.5rem 0.8rem;
-  background-color: var(--blue-light-color);
-  border: 1px solid var(--border-blue-color);
+  background-color: var(--red-light-color);
+  border: 1px solid var(--second-red-color);
   border-radius: 4px;
 }
 
@@ -134,8 +150,10 @@ body {
 }
 
 .input:focus {
-  border-color: var(--blue-dark-color);
+  border-color: var(--red-color);
   outline: 3px solid transparent;
+  background-color: white;
+  transition: 0.2s;
 }
 
 .flex-inputs {
@@ -144,47 +162,47 @@ body {
 }
 
 .input::placeholder {
-  color: var(--blue-dark-2-color);
+  color: var(--second-red-color);
 }
 
 .button-blue {
-  background-color: var(--blue-dark-color);
+  background-color: var(--red-color);
   color: white;
   border: none;
   padding: 0.5rem;
   width: 15rem;
   font-weight: bold;
   transition: 350ms;
-  border: 1px solid var(--blue-dark-color);
+  border: 1px solid var(--red-color);
 }
 
 .button-blue:hover {
   background-color: white;
-  color: var(--blue-dark-color);
-  border: 1px solid var(--blue-dark-color);
+  color: var(--red-color);
+  border: 1px solid var(--red-color);
 }
 
 .button-white {
   background-color: white;
-  color: var(--blue-dark-color);
+  color: var(--red-color);
   border: none;
   padding: 0.5rem;
   width: 15rem;
   font-weight: bold;
   transition: 350ms;
-  border: 1px solid var(--blue-dark-color);
+  border: 1px solid var(--red-color);
 }
 
 .button-white:hover {
-  background-color: var(--blue-dark-color);
+  background-color: var(--red-color);
   color: white;
   border: 1px solid white;
 }
 
 .container-lists {
-  background-color: var(--blue-light-color);
+  background-color: var(--red-light-color);
   border-radius: 1rem;
-  border: 1px solid var(--border-blue-color);
+  border: 1px solid var(--second-red-color);
   margin-top: 3rem;
   margin-bottom: 3rem;
   display: grid;
@@ -195,7 +213,7 @@ body {
   margin: 2rem 1.7rem;
   background-color: var(--blue-extra-light-color);
   border-radius: 1rem;
-  border: 1px solid var(--border-blue-color);
+  border: 1px solid var(--second-red-color);
 }
 
 .element-title {

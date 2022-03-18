@@ -12,10 +12,10 @@ function RecuperarC2(){
           <Col lg={6} style={{background:"#66BEEF"}}>
               <h1 className="styleTitle">¡Recupera tu contraseña!</h1>
               <p className="styleSubtitle">Para brindarte un mejor servicio, necesitamos que ontinues los siguientes pasos, para poder cambiar tu contraseña</p>
-              <img className="styleImagen" src={recuperarCimg}/>
+              <img className="styleImagen" alt="Recuperar imagen" src={recuperarCimg}/>
               </Col>
             <Col lg={6}> 
-            <img className="styleImagen2" src={ImgHeader}/>
+            <img className="styleImagen2" alt="Imagen encabezado" src={ImgHeader}/>
             <p className="styleText">Ingresa el codigo de verificacion que enviamos a tu correo electronico para cambiar la contraseña</p>
             <p className="styleData">Codigo de verificacion</p>
             <InputGroup className="styleRInput">

@@ -15,25 +15,43 @@
   src: url(assets/font/OpenSans_Condensed/OpenSans_Condensed-Light.ttf);
 }
 @font-face {
-  font-family: 'TimeNewRoman-bold' ;
+  font-family: "TimeNewRoman-bold";
   src: url(assets/font/Times_New_Roman/times_new_roman.ttf);
 }
 
 :root {
-  --blue-extra-light-color: #C2E8FE;
-  --background-color: #DDF1FC;
-  --blue-light-color: #a6d2eb;
+  --blue-extra-light-color: #c2e8fe;
+  --background-color: #ddf1fc;
+  --red-light-color: #a6d2eb;
   --blue-color: #61dafb;
-  --blue-dark-color: #0da0f2;
-  --border-blue-color: #137eba;
+  --second-red-color: #137eba;
   --blue-dark-2-color: #055f92;
-  --green-button: #5DD7C8;
-  --red-button: #AC2727;
+  --green-button: #5dd7c8;
+  --red-button: #ac2727;
+  /* NEW COLORS */
+  --bg-red: #ce3030;
+  --red-color: #e0061f;
+  --red-light-color: #ff929e;
+  --second-red-color: #de0b0b;
+  --red-dark-color: #660606;
+  --green-color: #03A426;
 }
 
 body {
   font-family: "OpenSans-regular";
-  background-color: var(--background-color);
+}
+
+.background-red {
+  background-color: var(--bg-red);
+}
+
+.full-width {
+  max-width: 100%;
+}
+
+.col-height {
+  height: 100vh;
+  padding: 0px 100px;
 }
 
 .header {
@@ -99,8 +117,6 @@ body {
 }
 /* Fin de Estilos para HomeIn */
 
-
-
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
     animation: App-logo-spin infinite 20s linear;
@@ -115,7 +131,91 @@ body {
   }
 }
 
+/* LOGIN, REGISTER AND RECOVER PASSWORD COMMON STYLES */
+.main__title,
+.main__description {
+  font-family: "Times New Roman", Times, serif;
+  color: black;
+}
+
+.main__title {
+  font-size: 48px;
+  font-weight: bold;
+  margin: 70px 0px;
+}
+
+.main__description {
+  font-size: 24px;
+  line-height: 24px;
+  margin-bottom: 100px;
+}
+
+.main__image {
+  margin-top: 100px;
+}
+
+.main__text {
+  font-size: 13px;
+  margin-top: 16px;
+  margin-bottom: 90px;
+}
+
+.last-input-margin {
+  margin-top: 20px;
+}
+
+.login__recover-password-link {
+  display: inline-block;
+  font-size: 14px;
+  font-weight: bold;
+  margin: 30px 0px;
+}
+
+.login__without-account {
+  margin-top: 20px;
+  font-size: 20px;
+  color: black;
+}
+
+.recover-password__text {
+  font-size: 21px;
+  margin-top: 40px;
+  margin-bottom: 70px;
+  line-height: 22px;
+}
+
+.recover-password__button-margin {
+  margin-top: 50px;
+  margin-bottom: 20px;
+}
+
 /* COMMON STYLES */
+a {
+  display: inline-block;
+  color: var(--red-color);
+  font-weight: bold;
+}
+
+a:hover {
+  color: var(--red-dark-color);
+  transition: 0.2s;
+}
+
+.box-green {
+  border: 1px solid var(--green-color);
+  border-radius: 16px;
+}
+
+.box-green > p {
+  margin: 30px 20px;
+}
+
+.box-green .link-green {
+  color: var(--green-color);
+  text-decoration: underline;
+  font-weight: lighter;
+}
+
 .label-input {
   font-size: 14px;
   text-align: left;
@@ -124,8 +224,8 @@ body {
 .input {
   font-size: 16px;
   padding: 0.5rem 0.5rem 0.5rem 0.8rem;
-  background-color: var(--blue-light-color);
-  border: 1px solid var(--border-blue-color);
+  background-color: var(--red-light-color);
+  border: 1px solid var(--second-red-color);
   border-radius: 4px;
 }
 
@@ -134,8 +234,10 @@ body {
 }
 
 .input:focus {
-  border-color: var(--blue-dark-color);
+  border-color: var(--red-color);
   outline: 3px solid transparent;
+  background-color: white;
+  transition: 0.2s;
 }
 
 .flex-inputs {
@@ -144,47 +246,47 @@ body {
 }
 
 .input::placeholder {
-  color: var(--blue-dark-2-color);
+  color: var(--second-red-color);
 }
 
-.button-blue {
-  background-color: var(--blue-dark-color);
+.button-red {
+  background-color: var(--red-color);
   color: white;
   border: none;
   padding: 0.5rem;
   width: 15rem;
   font-weight: bold;
   transition: 350ms;
-  border: 1px solid var(--blue-dark-color);
+  border: 1px solid var(--red-color);
 }
 
-.button-blue:hover {
+.button-red:hover {
   background-color: white;
-  color: var(--blue-dark-color);
-  border: 1px solid var(--blue-dark-color);
+  color: var(--red-color);
+  border: 1px solid var(--red-color);
 }
 
 .button-white {
   background-color: white;
-  color: var(--blue-dark-color);
+  color: var(--red-color);
   border: none;
   padding: 0.5rem;
   width: 15rem;
   font-weight: bold;
   transition: 350ms;
-  border: 1px solid var(--blue-dark-color);
+  border: 1px solid var(--red-color);
 }
 
 .button-white:hover {
-  background-color: var(--blue-dark-color);
+  background-color: var(--red-color);
   color: white;
   border: 1px solid white;
 }
 
 .container-lists {
-  background-color: var(--blue-light-color);
+  background-color: var(--red-light-color);
   border-radius: 1rem;
-  border: 1px solid var(--border-blue-color);
+  border: 1px solid var(--second-red-color);
   margin-top: 3rem;
   margin-bottom: 3rem;
   display: grid;
@@ -195,14 +297,14 @@ body {
   margin: 2rem 1.7rem;
   background-color: var(--blue-extra-light-color);
   border-radius: 1rem;
-  border: 1px solid var(--border-blue-color);
+  border: 1px solid var(--second-red-color);
 }
 
 .element-title {
   font-family: "OpenSansCondensed-bold";
   font-size: 1.2rem;
   margin-top: 1rem;
-  margin-bottom: .1rem;
+  margin-bottom: 0.1rem;
 }
 
 .element-subtitle:last-child {
@@ -212,14 +314,14 @@ body {
 .button-edit {
   display: block;
   margin: auto;
-  margin-bottom: .5rem;
+  margin-bottom: 0.5rem;
   width: 8rem;
   border-radius: 1rem;
   border: 2px solid var(--green-button);
   color: var(--green-button);
   font-weight: bold;
   transition: 350ms;
-  padding: .2rem 0;
+  padding: 0.2rem 0;
 }
 
 .button-edit:hover {
@@ -238,7 +340,7 @@ body {
   color: var(--red-button);
   font-weight: bold;
   transition: 350ms;
-  padding: .2rem 0;
+  padding: 0.2rem 0;
 }
 
 .button-delete:hover {
@@ -250,7 +352,7 @@ body {
 .horizontal-list {
   display: flex;
   justify-content: space-between;
-  padding: .5rem 3rem;
+  padding: 0.5rem 3rem;
   align-items: center;
 }
 

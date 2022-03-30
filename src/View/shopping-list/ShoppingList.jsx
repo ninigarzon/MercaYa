@@ -1,11 +1,11 @@
 import React from 'react';
+import { useHistory } from 'react-router';
 import { Card, Col, Container, Row } from 'react-bootstrap';
 import ImgList from "../../assets/img/home-ico-lista.svg";
 import ImgEdit from "../../assets/img/edit-icon-big.svg";
 import ImgDelete from "../../assets/img/delete-icon-big.svg";
 
 import '../../App.css';
-import { useHistory } from 'react-router';
 
 function ShoppingList() {
     const history = useHistory();

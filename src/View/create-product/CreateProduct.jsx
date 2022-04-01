@@ -6,13 +6,11 @@ function CreateProduct() {
   const history = useHistory();
 
   return (
-    <div className="ml-5 pt-5" style={{ height: "91vh" }}>
+    <div className="pt-5 ml-5" style={{ height: "91vh" }}>
       <Container className="margin-top-for-all">
         <Row>
           <Col lg={12}>
-            <h1 className="titleHomeIn">
-              Ingrese un producto a su lista de compras
-            </h1>
+            <h1 className="titleHomeIn">Ingresa los datos</h1>
           </Col>
         </Row>
         <div className="container-inputs">
@@ -21,68 +19,91 @@ function CreateProduct() {
             <input
               className="input"
               type="text"
-              placeholder="Ingrese nombre de la marca"
+              placeholder="Ingrese nombre del producto"
             />
           </div>
           <div className="second flex-inputs">
-            <label className="label-input">Categoria</label>
+            <label className="label-input">Precio</label>
             <input
               className="input"
               type="text"
-              placeholder="Ingrese la categoria"
+              placeholder="Ingrese la marca del producto"
             />
           </div>
           <div className="third flex-inputs">
-            <label className="label-input">
-              ¿En que supermercado se encuentra esta marca?
-            </label>
+            <label className="label-input">Cantidad</label>
             <input
               className="input"
               type="text"
-              placeholder="Ingrese nombre del supermercado"
-            />
-          </div>
-          <div className="fourth flex-inputs">
-            <label className="label-input">
-              ¿En que supermercado se encuentra esta marca?
-            </label>
-            <input
-              className="input"
-              type="text"
-              placeholder="Ingrese nombre del supermercado"
+              placeholder="Ingrese la cantidad actual"
             />
           </div>
         </div>
-        <button className="button-red margin-btn">GUARDAR</button>
-        <div className="container-lists horizontal-list">
-          <div>
-            <p className="element-title">Leche deslactosada</p>
-            <p className="element-subtitle without-margin">Marca: Alpina</p>
-            <p className="element-subtitle">Cantidad actual: 2 libras</p>
-          </div>
-          <div>
-            <button className="button-edit">Editar</button>
-            <button className="button-delete without-margin">Eliminar</button>
-          </div>
-        </div>
-        <div className="container-lists horizontal-list">
-          <div>
-            <p className="element-title">Leche deslactosada</p>
-            <p className="element-subtitle without-margin">Marca: Alpina</p>
-            <p className="element-subtitle">Cantidad actual: 2 libras</p>
-          </div>
-          <div>
-            <button className="button-edit">Editar</button>
-            <button className="button-delete without-margin">Eliminar</button>
+        <div style={{ display: "flex", flexDirection: "column" }}>
+          <p
+            style={{ fontWeight: "bold", fontSize: "20px", textAlign: "left" }}
+          >
+            Descripción
+          </p>
+          <div style={{ display: "flex", justifyContent: "space-between" }}>
+            <textarea
+              name=""
+              id=""
+              cols="30"
+              rows="10"
+              style={{ width: "85%", borderRadius: "1rem", backgroundColor: "#FF929E", borderColor: "#DE0B0B", padding:"1rem" }}
+            ></textarea>
+            <div
+              style={{
+                display: "flex",
+                flexDirection: "column",
+                justifyContent: "space-between",
+              }}
+            >
+              <button
+                style={{
+                  borderColor: "#E01A79",
+                  backgroundColor: "white",
+                  fontWeight: "bold",
+                  color: "#E01A79",
+                  borderRadius: "1rem",
+                  height: " 3rem",
+                }}
+              >
+                Subir foto
+              </button>
+              <button
+                style={{
+                  borderColor: "#E01A79",
+                  backgroundColor: "white",
+                  fontWeight: "bold",
+                  color: "#E01A79",
+                  borderRadius: "1rem",
+                  height: " 3rem",
+                }}
+              >
+                Eliminar foto
+              </button>
+            </div>
           </div>
         </div>
       </Container>
-      <button
-        className="button-white btn-finish"
-        onClick={() => history.goBack()}
+      <div
+        style={{
+          display: "flex",
+          justifyContent: "space-between",
+          width: "40%",
+          margin: "auto",
+        }}
       >
-        ATRÁS
-      </button>
+        <button
+          className="button-red btn-finish"
+          onClick={() => history.goBack()}
+        >
+          ATRÁS
+        </button>
+        <button className="button-green btn-finish" style={{}}>GUARDAR</button>
+      </div>
     </div>
   );
 }

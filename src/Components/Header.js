@@ -25,8 +25,8 @@ function Header() {
                         <Nav className="mr-5">
                             <NavDropdown title="Nuestros Servicios" id="collasible-nav-dropdown" style={{ fontFamily: "OpenSansCondensed-light", fontSize: "18px" }}>
                                 <NavDropdown.Item href="/wishlist">Wishlist</NavDropdown.Item>
-                                <NavDropdown.Item href="/shopping-list">Tienda</NavDropdown.Item>
-                                <NavDropdown.Item href="#action/3.3">Ventas</NavDropdown.Item>
+                                <NavDropdown.Item href="#">Tienda</NavDropdown.Item>
+                                <NavDropdown.Item href="/shopping-list">Ventas</NavDropdown.Item>
                             </NavDropdown>
                         </Nav>
                         <Nav>

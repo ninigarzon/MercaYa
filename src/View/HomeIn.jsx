@@ -17,13 +17,13 @@ function HomeIn() {
       img: ImgShop,
       title: "Tienda",
       text: "Te redirigiremos la visual donde podras explorar los diferentes productos para ti",
-      url: "/shopping-list",
+      url: "#",
     },
     {
       img: ImgSales,
       title: "Ventas",
       text: "Te redirigiremos la visual donde podras agregar productos para la venta y consultarlos",
-      url: "#",
+      url: "/shopping-list",
     },
   ];
 

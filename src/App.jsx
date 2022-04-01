@@ -19,6 +19,7 @@ import State from "./context/state";
 
 /* STYLES */
 import "./App.css";
+import MyProducts from "./View/my-products/MyProducts";
 
 function App() {
   const { pathname } = window.location;
@@ -40,6 +41,12 @@ function App() {
               exact
               path="/shopping-list"
               component={ShoppingList}
+            />
+            <PrivateRoute
+              isAuthenticated={true}
+              exact
+              path="/my-products"
+              component={MyProducts}
             />
             <PrivateRoute
               isAuthenticated={true}

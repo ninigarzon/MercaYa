@@ -1,20 +1,14 @@
 import React from "react";
-import { useHistory } from "react-router";
-import Heart from "../../assets/img/heart.svg";
 import Example from "../../assets/img/example.png";
 import "../../App.css";
+import { useHistory } from "react-router";
 
-function Wishlist() {
+function MyProducts() {
   const history = useHistory();
   return (
     <div className="pt-5 ml-5" style={{ height: "91vh" }}>
       <div>
-        <img
-          src={Heart}
-          alt="Favoritos"
-          style={{ width: "3rem", marginTop: "3rem" }}
-        />
-        <h2 style={{ fontWeight: "bold" }}>Mi Wishlist</h2>
+        <h2 style={{ fontWeight: "bold", marginTop: "3rem" }}>Mis productos</h2>
       </div>
       <div
         style={{
@@ -108,6 +102,13 @@ function Wishlist() {
                 >
                   Eliminar
                 </button>
+                <button
+                  className="button-edit-yellow"
+                  style={{ marginLeft: "1rem ", marginBottom: "0" }}
+                  onClick={() => history.push("/create-product")}
+                >
+                  Editar
+                </button>
               </div>
             </div>
           </div>
@@ -150,4 +151,4 @@ function Wishlist() {
   );
 }
 
-export default Wishlist;
+export default MyProducts;

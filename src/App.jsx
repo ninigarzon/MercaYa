@@ -1,4 +1,5 @@
-import { PublicRoute, PrivateRoute } from "react-private-public-route";
+import { PrivateRoute } from "react-private-public-route";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
 import Header from "./Components/Header";
 
@@ -11,8 +12,7 @@ import ShoppingList from "./View/shopping-list/ShoppingList";
 import CreateShoppingList from "./View/create-shopping-list/CreateShoppingList";
 import CreateBranding from "./View/create-branding/CreateBranding";
 import CreateProduct from "./View/create-product/CreateProduct";
-
-import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import Wishlist from "./View/wishlist/Wishlist";
 
 /* CONTEXT */
 import State from "./context/state";
@@ -26,15 +26,15 @@ function App() {
   return (
     <div className="App">
       <State>
-        {(pathname !== "/login" && pathname !== "/recover-password") && (
-          <Header />
-        )}
+        {pathname !== "/" &&
+          pathname !== "/recover-password" &&
+          pathname !== "/register" && <Header />}
         <Router>
           <Switch>
-            <Route exact path="/login" component={Login} />
+            <Route exact path="/" component={Login} />
             <Route exact path="/recover-password" component={RecoverPassword} />
-            <Route exact path="/Register" component={Register} />
-            <PublicRoute exact path="/" component={Home} />
+            <Route exact path="/register" component={Register} />
+            <Route path="/home" component={Home} />
             <PrivateRoute
               isAuthenticated={true}
               exact
@@ -58,6 +58,12 @@ function App() {
               exact
               path="/create-product"
               component={CreateProduct}
+            />
+            <PrivateRoute
+              isAuthenticated={true}
+              exact
+              path="/wishlist"
+              component={Wishlist}
             />
           </Switch>
         </Router>

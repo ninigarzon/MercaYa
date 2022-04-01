@@ -48,7 +48,7 @@ function RecoverPassword() {
             Para brindarte un mejor servicio, necesitamos que continues los
             siguientes pasos, para poder cambiar tu contraseña.
           </p>
-          <img src={recoverImg} alt="Imagen de recuperar contraseña" />
+          <img src={recoverImg} alt="Imagen de recuperar contraseña" className="image-size" />
         </Col>
         <Col className="col-height">
           <img className="main__image" src={logo} alt="MBShop Logo" />

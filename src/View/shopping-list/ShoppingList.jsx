@@ -1,49 +1,46 @@
 import React from 'react';
-import { useHistory } from 'react-router';
 import { Card, Col, Container, Row } from 'react-bootstrap';
-import ImgList from "../../assets/img/home-ico-lista.svg";
-import ImgEdit from "../../assets/img/edit-icon-big.svg";
-import ImgDelete from "../../assets/img/delete-icon-big.svg";
+import MyProducts from "../../assets/img/products-mine.png";
+import AddProducts from "../../assets/img/add-product.png";
+import MySales from "../../assets/img/my-sales.png";
 
 import '../../App.css';
 
 function ShoppingList() {
-    const history = useHistory();
-
     const informationCards = [
         {
-            img: ImgList,
-            title: 'Crear lista de productos',
-            text: 'Si quieres crear una nueva lista de comprar, dale clic en crear lista aqui.',
-            url: '/create-shopping-list'
+            img: MyProducts,
+            title: 'Mis productos',
+            text: 'Aqui podras consultar tus productos publicados',
+            url: '#'
         },
         {
-            img: ImgEdit,
-            title: 'Editar lista de comprar',
-            text: 'En caso de tener una lista ya existente, podras editarla, haz clic en editar lista aqui.',
-            url: '/'
+            img: AddProducts,
+            title: 'Añadir productos',
+            text: 'Aqui podras añadir productos y publicarlos para la venta',
+            url: '/create-product'
         },
         {
-            img: ImgDelete,
-            title: 'Eliminar lista de comprar',
-            text: 'Si tiene una lista de compras que quisieras eliminar, dale clic en eliminar lista aqui.',
-            url: '/'
+            img: MySales,
+            title: 'Mis ventas',
+            text: 'Aqui podras consultar tu historial de ventas realizadas',
+            url: '#'
         }
     ];
 
     return (
-            <div className="ml-5 pt-5" style={{ height: "91vh" }}>
+            <div className="pt-5 ml-5" style={{ height: "91vh" }}>
                 <Container className='margin-top-for-all'>
                     <Row>
                         <Col lg={12}>
-                            <h1 className="titleHomeIn ">Lista de compras</h1>
+                            <h1 className="titleHomeIn ">Opciones</h1>
                         </Col>
-                        {informationCards.map((event) => {
+                        {informationCards.map((event, index) => {
                             return (
-                                <Col lg={4} className="d-flex mt-4">
+                                <Col lg={4} className="mt-4 d-flex">
                                     <Card style={{ width: '18rem', borderRadius: "20px" }}>
                                         <Card.Header className="borderRadiusCardHeader">
-                                            <Card.Img variant="top" className="mt-3 mb-3 styleImgCardHomeIn" src={event.img} />
+                                            <Card.Img variant="top" className="mt-3 mb-3 styleImgCardHomeIn" src={event.img} style={{width: index === 1 ? "6.2rem" : index === 2 ? "9.8rem" : ""}}/>
                                         </Card.Header>
                                         <Card.Body>
                                             <Card.Title className="styleTitleCard">{event.title}</Card.Title>
@@ -58,7 +55,6 @@ function ShoppingList() {
                         })}
                     </Row>
                 </Container>
-                <button className='button-white btn-finish' onClick={() => history.goBack()}>ATRÁS</button>
             </div>
     );
 }

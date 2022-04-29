@@ -340,7 +340,6 @@ a:hover {
 .button-edit {
   display: block;
   margin: auto;
-  margin-bottom: 0.5rem;
   width: 8rem;
   border-radius: 1rem;
   border: 2px solid var(--green-button);
@@ -359,7 +358,6 @@ a:hover {
 .button-edit-yellow {
   display: block;
   margin: auto;
-  margin-bottom: 0.5rem;
   width: 8rem;
   border-radius: 1rem;
   border: 2px solid var(--yellow-color);
@@ -378,7 +376,6 @@ a:hover {
 .button-delete {
   display: block;
   margin: auto;
-  margin-bottom: 1.8rem;
   width: 8rem;
   border-radius: 1rem;
   border: 2px solid var(--red-button);
@@ -420,4 +417,10 @@ a:hover {
 
 .btn-create-branding > .margin-btn {
   margin-top: 1.7rem;
+}
+
+.text-validate {
+  color: red;
+  text-align: initial;
+  font-size: 13px;
 }
